@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+.container {
+    display: flex;
+    justify-content: center;  /* Centering the calculator horizontally */
+    align-items: center;      /* Vertically centering the calculator */
+    flex-direction: column;   /* Heading aur calculator ko vertically stack karne ke liye */
+}
+
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+
+}
+h1{
+    color: white;
+    margin-bottom:20px;
+    text-align: center;
+    width: 900px;
+
+}
+
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(162, 23, 23, 0.1);
+    box-shadow: 0px 0px 10px rgb(251, 248, 248);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equalBtn{
+    background-color: #fb7c14;
+}
+.equalBtn:hover{
+    background-color: rgb(241, 98, 16);
+    box-shadow: 0px 0px 10px rgb(248, 245, 243);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operator{
+    color: #6dee0a;
+}
+
+
+/* Media Queries */
+
+/* For devices with max width of 768px (Tablets and smaller screens) */
+@media (max-width: 768px) {
+    input {
+        width: 280px;
+        padding: 20px;
+        font-size: 32px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 8px;
+        font-size: 18px;
+    }
+    
+    .calculator {
+        padding: 15px;
+    }
+}
+
+/* For devices with max width of 480px (Mobile devices) */
+@media (max-width: 480px) {
+    input {
+        width: 240px;
+        padding: 16px;
+        font-size: 28px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        margin: 6px;
+        font-size: 16px;
+    }
+
+    .calculator {
+        padding: 10px;
+    }
+}
